@@ -1,0 +1,83 @@
+### Exemplos de Uso da API de Entrega
+
+#### 1. Criar uma entrega com frete expresso
+POST {{base_url}}/api/delivery/create
+Content-Type: application/json
+
+{
+  "recipient": "João Silva",
+  "address": "Rua das Flores, 123 - São Paulo/SP",
+  "weight": 5.0,
+  "shippingType": "EXP"
+}
+
+#### 2. Criar uma entrega com frete econômico (elegível para frete grátis)
+POST {{base_url}}/api/delivery/create
+Content-Type: application/json
+
+{
+  "recipient": "Maria Santos",
+  "address": "Av. Paulista, 1000 - São Paulo/SP", 
+  "weight": 1.5,
+  "shippingType": "ECO"
+}
+
+#### 3. Criar uma entrega com frete padrão
+POST {{base_url}}/api/delivery/create
+Content-Type: application/json
+
+{
+  "recipient": "Carlos Oliveira",
+  "address": "Rua Augusta, 500 - São Paulo/SP",
+  "weight": 8.0,
+  "shippingType": "PAD"
+}
+
+#### 4. Aplicar desconto promocional (peso > 10kg)
+POST {{base_url}}/api/delivery/apply-promotional-discount
+Content-Type: application/json
+
+{
+  "recipient": "Ana Costa",
+  "address": "Rua dos Pinheiros, 200 - São Paulo/SP",
+  "weight": 15.0,
+  "shippingType": "PAD"
+}
+
+#### 5. Obter tipos de frete disponíveis
+GET {{base_url}}/api/delivery/shipping-types
+
+#### 6. Exemplo de erro - peso inválido
+POST {{base_url}}/api/delivery/create
+Content-Type: application/json
+
+{
+  "recipient": "Teste Error",
+  "address": "Endereço Teste",
+  "weight": -5.0,
+  "shippingType": "PAD"
+}
+
+#### 7. Exemplo de erro - destinatário vazio
+POST {{base_url}}/api/delivery/create
+Content-Type: application/json
+
+{
+  "recipient": "",
+  "address": "Endereço Teste",
+  "weight": 3.0,
+  "shippingType": "PAD"
+}
+
+#### 8. Exemplo de erro - tipo de frete inválido
+POST {{base_url}}/api/delivery/create
+Content-Type: application/json
+
+{
+  "recipient": "Teste Error",
+  "address": "Endereço Teste", 
+  "weight": 3.0,
+  "shippingType": "INVALID"
+}
+
+@base_url = https://localhost:7001
