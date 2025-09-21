@@ -6,54 +6,72 @@ Este documento apresenta a solução completa para a refatoração do sistema le
 
 ## 🎯 Objetivos Alcançados
 
-✅ **Separação de Responsabilidades**: Implementação de arquitetura em camadas bem definidas  
-✅ **Encapsulamento**: Value Objects imutáveis com validação intrínseca  
-✅ **Extensibilidade**: Pattern Strategy para tipos de frete e Factory para criação  
-✅ **Robustez**: Tratamento abrangente de erros com exceções personalizadas  
-✅ **Testabilidade**: 35 testes unitários com 100% de aprovação  
-✅ **API Funcional**: Endpoints REST documentados e funcionais  
+✅ **Separação de Responsabilidades**  
+✅ **Encapsulamento**  
+✅ **Extensibilidade**  
+✅ **Robustez**  
+✅ **Testabilidade**  
+✅ **API Funcional**  
 
 ## 🏗️ Arquitetura da Solução
 
 ### Estrutura de Camadas
 
 ```
-📁 Domain/
-├── 📄 Entities/Delivery.cs          # Entidade principal imutável
-├── 📄 ValueObjects/                 # Weight, Address, Recipient
-├── 📄 Interfaces/                   # Contratos IShippingCalculator, ILabelService
-├── 📄 Services/ShippingCalculators/ # Estratégias Express, Standard, Economy
-├── 📄 Services/LabelService.cs      # Geração de etiquetas e resumos
-├── 📄 Exceptions/                   # Exceções específicas do domínio
-└── 📄 Enums/ShippingType.cs        # Enumerações e extensões
+📁 Domain/ (Camada de Domínio - Regras de Negócio)
+├── � Entities/
+│   └── 📄 Order.cs                  # Entidade principal imutável  
+├── � ValueObjects/
+│   ├── 📄 Weight.cs                 # Peso da encomenda
+│   ├── 📄 Address.cs                # Endereço de entrega
+│   └── 📄 Recipient.cs              # Destinatário
+├── � Interfaces/
+│   └── 📄 IShippingCalculator.cs    # Contrato para cálculo de frete
+├── 📁 Services/
+│   ├── 📄 ExpressShippingCalculator.cs   # Estratégia frete expresso
+│   ├── 📄 StandardShippingCalculator.cs  # Estratégia frete padrão
+│   └── 📄 EconomyShippingCalculator.cs   # Estratégia frete econômico
+├── 📁 Exceptions/
+│   ├── 📄 DomainException.cs        # Exceção base do domínio
+│   ├── 📄 InvalidWeightException.cs # Peso inválido
+│   ├── 📄 InvalidAddressException.cs # Endereço inválido
+│   ├── 📄 InvalidRecipientException.cs # Destinatário inválido
+│   └── 📄 UnsupportedShippingTypeException.cs # Tipo frete inválido
+└── 📁 Enums/
+    └── 📄 ShippingType.cs          # Tipos de frete disponíveis
 
-📁 Controllers/
-└── 📄 DeliveryController.cs         # API REST endpoints
+📁 Application/ (Camada de Aplicação - Casos de Uso)
+├── � Services/
+│   ├── �📄 DeliveryService.cs        # Orquestração de criação de entregas
+│   ├── 📄 LabelService.cs           # Geração de etiquetas e resumos
+│   ├── � Factories/
+│   │   └── 📄 ShippingCalculatorFactory.cs # Factory para calculadoras
+│   ├── 📁 Interfaces/
+│   │   ├── 📄 IDeliveryService.cs   # Interface serviço entrega
+│   │   ├── 📄 ILabelService.cs      # Interface serviço etiquetas
+│   │   ├── 📁 Factories/
+│   │   │   └── 📄 IShippingCalculatorFactory.cs
+│   │   └── 📁 Validation/
+│   │       └── 📄 IValidationService.cs
+│   └── 📁 Validation/
+│       └── 📄 ValidationService.cs  # Validações de entrada
 
-📁 Tests/
-├── 📄 ValueObjectsTests.cs          # Testes de Value Objects
-├── 📄 ShippingCalculatorTests.cs    # Testes de calculadoras
-└── 📄 DeliveryTests.cs              # Testes da entidade principal
+📁 Presentation/ (Camada de Apresentação - API/UI)
+├── 📁 Controllers/
+│   └── 📄 DeliveryController.cs     # API REST endpoints
+└── 📁 Contracts/
+    ├── 📁 Requests/
+    │   └── 📄 CreateDeliveryRequest.cs
+    └── 📁 Responses/
+        ├── 📄 DeliveryResponse.cs
+        └── 📄 PromotionalDiscountResponse.cs
+
+📁 Infrastructure/ (Camada de Infraestrutura - Tecnologia)
+├── 📁 Configuration/
+│   └── 📄 DependencyInjection.cs   # Configuração DI
+└── 📁 CrossCutting/
+    └── 📄 Extensions.cs            # Extensões úteis
 ```
-
-### Principais Transformações
-
-| **Aspecto** | **Antes (Legado)** | **Depois (Refatorado)** |
-|-------------|-------------------|-------------------------|
-| **Encapsulamento** | Atributos públicos | Value Objects imutáveis |
-| **Cálculo de Frete** | If-else rígido | Strategy Pattern |
-| **Validações** | Ausentes | Validação no construtor |
-| **Nomenclatura** | Códigos crípticos ("EXP") | Nomes descritivos (Express) |
-| **Tratamento de Erro** | Falhas silenciosas | Exceções específicas |
-| **Extensibilidade** | Código rígido | Interfaces e polimorfismo |
-
-## 📊 Métricas de Qualidade
-
-- **35 Testes Unitários** - 100% de aprovação
-- **0 Warnings** - Código limpo sem alertas
-- **0 Erros** - Compilação bem-sucedida
-- **6 Camadas** - Separação clara de responsabilidades
-- **4 Patterns** - Strategy, Factory, Value Object, Repository
 
 ## 🚀 Funcionalidades Implementadas
 
@@ -127,20 +145,15 @@ A arquitetura está preparada para:
 
 1. **Compilar**: `dotnet build`
 2. **Testar**: `dotnet test`
-3. **Executar**: `dotnet run --project WebApplication1`
+3. **Executar**: `dotnet run --project OrderManager.API`
 4. **Acessar**: http://localhost:5248/swagger
 
 ## 📚 Documentação Completa
 
 - `PARECER_TECNICO.md` - Análise detalhada do código legado
 - `RELATORIO_TECNICO.md` - Decisões arquiteturais e justificativas
-- `Examples.http` - Exemplos práticos de uso da API
 
 ## ✨ Conclusão
 
 A refatoração transformou com sucesso um código legado problemático em uma solução robusta, testável e extensível. A aplicação dos princípios de Clean Code resultou em um sistema que não apenas resolve os problemas atuais, mas está preparado para futuras evoluções do negócio.
 
-**Status**: ✅ **COMPLETO E FUNCIONAL**  
-**Testes**: ✅ **35/35 APROVADOS**  
-**Compilação**: ✅ **SUCESSO**  
-**API**: ✅ **OPERACIONAL**

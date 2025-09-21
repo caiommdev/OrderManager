@@ -1,7 +1,7 @@
-using WebApplication1.Domain.Enums;
-using WebApplication1.Domain.Interfaces;
+using OrderManager.API.Application.Services.Interfaces;
+using OrderManager.API.Domain.Enums;
 
-namespace WebApplication1.Domain.Services.Factories
+namespace OrderManager.API.Domain.Services.Factories
 {
     public interface IShippingCalculatorFactory
     {

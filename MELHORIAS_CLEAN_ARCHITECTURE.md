@@ -243,31 +243,60 @@ Controllers → Services → Entities/VOs
 | **Contracts Separados** | 0 | 3 | +∞ |
 | **Services de Validação** | 0 | 1 | +∞ |
 
-## 🚀 **Nova Estrutura Final**
+## 🚀 **Nova Estrutura Final seguindo Clean Architecture**
 
 ```
-📁 WebApplication1/
-├── 📁 Application/
-│   └── 📁 Services/
-│       ├── 📄 IDeliveryService.cs
-│       └── 📄 DeliveryService.cs
-├── 📁 Contracts/
-│   ├── 📁 Requests/
-│   │   └── 📄 CreateDeliveryRequest.cs
-│   └── 📁 Responses/
-│       ├── 📄 DeliveryResponse.cs
-│       └── 📄 PromotionalDiscountResponse.cs
-├── 📁 Domain/
+📁 OrderManager.API/
+├── 📁 Domain/ (Camada de Domínio - Regras de Negócio)
 │   ├── 📁 Entities/
-│   ├── 📁 ValueObjects/ (sem lógica)
-│   ├── 📁 Services/
-│   │   ├── 📁 Validation/
-│   │   │   ├── 📄 IValidationService.cs
-│   │   │   └── 📄 ValidationService.cs
-│   │   └── ... (outros services)
-│   └── ... (outras camadas)
-└── 📁 Controllers/
-    └── 📄 DeliveryController.cs (simplificado)
+│   │   └── 📄 Order.cs
+│   ├── 📁 ValueObjects/ (sem lógica - apenas dados)
+│   │   ├── 📄 Weight.cs
+│   │   ├── 📄 Address.cs
+│   │   └── 📄 Recipient.cs
+│   ├── 📁 Interfaces/
+│   │   └── � IShippingCalculator.cs
+│   ├── �📁 Services/ (Serviços de Domínio)
+│   │   ├── 📄 ExpressShippingCalculator.cs
+│   │   ├── 📄 StandardShippingCalculator.cs
+│   │   └── 📄 EconomyShippingCalculator.cs
+│   ├── 📁 Exceptions/
+│   │   ├── 📄 DomainException.cs
+│   │   ├── 📄 InvalidWeightException.cs
+│   │   ├── � InvalidAddressException.cs
+│   │   ├── � InvalidRecipientException.cs
+│   │   └── 📄 UnsupportedShippingTypeException.cs
+│   └── 📁 Enums/
+│       └── 📄 ShippingType.cs
+├── 📁 Application/ (Camada de Aplicação - Casos de Uso)
+│   └── 📁 Services/
+│       ├── 📄 DeliveryService.cs
+│       ├── 📄 LabelService.cs
+│       ├── 📁 Factories/
+│       │   └── 📄 ShippingCalculatorFactory.cs
+│       ├── 📁 Interfaces/
+│       │   ├── � IDeliveryService.cs
+│       │   ├── 📄 ILabelService.cs
+│       │   ├── 📁 Factories/
+│       │   │   └── 📄 IShippingCalculatorFactory.cs
+│       │   └── 📁 Validation/
+│       │       └── 📄 IValidationService.cs
+│       └── 📁 Validation/
+│           └── 📄 ValidationService.cs
+├── 📁 Presentation/ (Camada de Apresentação - Interface Externa)
+│   ├── 📁 Controllers/
+│   │   └── 📄 DeliveryController.cs (simplificado)
+│   └── 📁 Contracts/
+│       ├── 📁 Requests/
+│       │   └── 📄 CreateDeliveryRequest.cs
+│       └── 📁 Responses/
+│           ├── 📄 DeliveryResponse.cs
+│           └── 📄 PromotionalDiscountResponse.cs
+└── 📁 Infrastructure/ (Camada de Infraestrutura - Detalhes Técnicos)
+    ├── 📁 Configuration/
+    │   └── 📄 DependencyInjection.cs
+    └── 📁 CrossCutting/
+        └── 📄 Extensions.cs
 ```
 
 ## ✨ **Conclusão**

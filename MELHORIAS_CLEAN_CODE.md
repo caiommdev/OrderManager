@@ -102,12 +102,12 @@ Passed!  - Failed: 0, Passed: 35, Skipped: 0, Total: 35
 - API endpoints funcionais
 - Validações preservadas
 
-## 🏗️ **Nova Estrutura de Arquivos**
+## 🏗️ **Nova Estrutura de Arquivos seguindo Clean Architecture**
 
 ```
-📁 Domain/
+📁 Domain/ (Camada de Domínio - Núcleo do Negócio)
 ├── 📁 Entities/
-│   └── 📄 Delivery.cs
+│   └── 📄 Order.cs
 ├── 📁 ValueObjects/
 │   ├── 📄 Weight.cs
 │   ├── 📄 Address.cs
@@ -115,23 +115,49 @@ Passed!  - Failed: 0, Passed: 35, Skipped: 0, Total: 35
 ├── 📁 Interfaces/
 │   └── 📄 IShippingCalculator.cs
 ├── 📁 Services/
-│   ├── 📁 ShippingCalculators/
-│   │   ├── 📄 ExpressShippingCalculator.cs
-│   │   ├── 📄 StandardShippingCalculator.cs
-│   │   └── 📄 EconomyShippingCalculator.cs
-│   ├── 📁 Factories/
-│   │   ├── 📄 IShippingCalculatorFactory.cs
-│   │   └── 📄 ShippingCalculatorFactory.cs
-│   ├── 📄 ILabelService.cs
-│   └── 📄 LabelService.cs
+│   ├── � ExpressShippingCalculator.cs
+│   ├── 📄 StandardShippingCalculator.cs
+│   └── 📄 EconomyShippingCalculator.cs
 ├── 📁 Exceptions/
 │   ├── 📄 DomainException.cs
 │   ├── 📄 InvalidWeightException.cs
 │   ├── 📄 InvalidAddressException.cs
-│   ├── 📄 InvalidRecipientException.cs
+│   ├── � InvalidRecipientException.cs
 │   └── 📄 UnsupportedShippingTypeException.cs
 └── 📁 Enums/
     └── 📄 ShippingType.cs
+
+📁 Application/ (Camada de Aplicação - Casos de Uso)
+├── 📁 Services/
+│   ├── 📄 DeliveryService.cs
+│   ├── 📄 LabelService.cs
+│   ├── 📁 Factories/
+│   │   └── 📄 ShippingCalculatorFactory.cs
+│   ├── � Interfaces/
+│   │   ├── 📄 IDeliveryService.cs
+│   │   ├── 📄 ILabelService.cs
+│   │   ├── 📁 Factories/
+│   │   │   └── 📄 IShippingCalculatorFactory.cs
+│   │   └── 📁 Validation/
+│   │       └── 📄 IValidationService.cs
+│   └── 📁 Validation/
+│       └── 📄 ValidationService.cs
+
+📁 Presentation/ (Camada de Apresentação - Interface Externa)
+├── 📁 Controllers/
+│   └── 📄 DeliveryController.cs
+└── 📁 Contracts/
+    ├── 📁 Requests/
+    │   └── 📄 CreateDeliveryRequest.cs
+    └── 📁 Responses/
+        ├── 📄 DeliveryResponse.cs
+        └── 📄 PromotionalDiscountResponse.cs
+
+📁 Infrastructure/ (Camada de Infraestrutura - Detalhes Técnicos)
+├── 📁 Configuration/
+│   └── 📄 DependencyInjection.cs
+└── 📁 CrossCutting/
+    └── 📄 Extensions.cs
 ```
 
 ## 🎨 **Princípios de Clean Code Aplicados**

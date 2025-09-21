@@ -7,18 +7,26 @@
 A refatoração seguiu uma arquitetura em camadas bem definida:
 
 **Camada de Domínio (`Domain/`)**
-- **Entidades**: `Delivery` - Representa o conceito central de uma entrega
-- **Value Objects**: `Weight`, `Address`, `Recipient` - Encapsulam valores com validação
-- **Interfaces**: `IShippingCalculator`, `ILabelService` - Definem contratos
-- **Serviços de Domínio**: Estratégias de cálculo de frete
+**Camada de Domínio (`Domain/`)**
+- **Entidades**: `Order` - Representa o conceito central de uma entrega
+- **Value Objects**: `Weight`, `Address`, `Recipient` - Encapsulam valores sem lógica
+- **Interfaces**: `IShippingCalculator` - Define contratos do domínio
+- **Serviços de Domínio**: ExpressShippingCalculator, StandardShippingCalculator, EconomyShippingCalculator
 - **Exceções**: Exceções específicas do domínio
 
-**Camada de Aplicação (`Services/`)**
+**Camada de Aplicação (`Application/`)**
+- **DeliveryService**: Orquestra a criação de entregas (casos de uso)
 - **LabelService**: Orquestra a geração de etiquetas e resumos
+- **ValidationService**: Centraliza validações de entrada
 - **ShippingCalculatorFactory**: Cria instâncias das estratégias de cálculo
 
-**Camada de Apresentação (`Controllers/`)**
+**Camada de Apresentação (`Presentation/`)**
 - **DeliveryController**: Expõe a API REST e trata requisições HTTP
+- **Contracts**: DTOs para comunicação externa (Requests/Responses)
+
+**Camada de Infraestrutura (`Infrastructure/`)**
+- **DependencyInjection**: Configuração do container de DI
+- **CrossCutting**: Extensões e utilitários transversais
 
 ### Exemplo de Abstração - Strategy Pattern
 
@@ -173,19 +181,29 @@ public static class ShippingTypeExtensions
 - `IsEligibleForFreeShipping` - Boolean com prefixo 'Is', semântica clara
 - `GenerateShippingLabel` - Ação específica e propósito evidente
 
-### Organização de Arquivos e Namespaces
+### Organização de Arquivos e Namespaces seguindo Clean Architecture
 
 ```
-WebApplication1/
-├── Domain/
-│   ├── Entities/          # Entidades de negócio
-│   ├── ValueObjects/      # Objetos de valor
-│   ├── Interfaces/        # Contratos
-│   ├── Services/          # Serviços de domínio
-│   ├── Exceptions/        # Exceções específicas
-│   └── Enums/            # Enumerações
-├── Controllers/           # Camada de apresentação
-└── Program.cs            # Configuração da aplicação
+OrderManager.API/
+├── Domain/                    # Camada de Domínio - Regras de Negócio
+│   ├── Entities/              # Entidades de negócio
+│   ├── ValueObjects/          # Objetos de valor (sem lógica)
+│   ├── Interfaces/            # Contratos do domínio
+│   ├── Services/              # Serviços de domínio
+│   ├── Exceptions/            # Exceções específicas
+│   └── Enums/                 # Enumerações
+├── Application/               # Camada de Aplicação - Casos de Uso
+│   └── Services/              # Serviços de aplicação
+│       ├── Interfaces/        # Interfaces dos serviços
+│       ├── Factories/         # Factories
+│       └── Validation/        # Validações
+├── Presentation/              # Camada de Apresentação - Interface Externa
+│   ├── Controllers/           # Controladores da API
+│   └── Contracts/             # DTOs (Requests/Responses)
+├── Infrastructure/            # Camada de Infraestrutura - Detalhes Técnicos
+│   ├── Configuration/         # Configurações de DI
+│   └── CrossCutting/         # Utilitários transversais
+└── Program.cs                # Configuração da aplicação
 ```
 
 **Benefícios da Organização:**
