@@ -5,5 +5,6 @@ namespace OrderManager.API.Application.Services.Interfaces.Validation
         void ValidateWeight(double weight);
         void ValidateAddress(string address);
         void ValidateRecipient(string recipient);
+        void ValidateShippingType(string shippingType);
     }
 }

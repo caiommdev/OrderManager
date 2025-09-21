@@ -1,8 +1,8 @@
 using OrderManager.API.Application.Services.Interfaces;
-using OrderManager.API.Application.Services.Interfaces.Factories;
 using OrderManager.API.Domain.Enums;
 using OrderManager.API.Domain.Exceptions;
 using OrderManager.API.Application.Services.ShippingCalculators;
+using OrderManager.API.Domain.Services.Factories;
 
 namespace OrderManager.API.Application.Services.Factories
 {

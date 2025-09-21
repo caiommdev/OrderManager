@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using OrderManager.API.Application.Services.Interfaces;
+using OrderManager.API.Application.Services.Interfaces.Validation;
 using OrderManager.API.Contracts.Requests;
 using OrderManager.API.Contracts.Responses;
 using OrderManager.API.Domain.Enums;
@@ -14,10 +15,13 @@ namespace OrderManager.API.Controllers
         private readonly ILabelService _labelService;
         private readonly IDeliveryService _deliveryService;
 
-        public DeliveryController(ILabelService labelService, IDeliveryService deliveryService)
+        private readonly IValidationService _validationService;
+
+        public DeliveryController(IValidationService validationService, ILabelService labelService, IDeliveryService deliveryService)
         {
             _labelService = labelService;
             _deliveryService = deliveryService;
+            _validationService = validationService;
         }
 
         [HttpPost("create")]
@@ -64,6 +68,8 @@ namespace OrderManager.API.Controllers
         {
             try
             {
+                ValidateRequest(request);
+
                 var originalDelivery = _deliveryService.CreateDelivery(
                     request.Recipient,
                     request.Address,
@@ -120,6 +126,14 @@ namespace OrderManager.API.Controllers
                 .ToList();
 
             return Ok(shippingTypes);
+        }
+
+        private void ValidateRequest(CreateDeliveryRequest request)
+        {
+            _validationService.ValidateRecipient(request.Recipient);
+            _validationService.ValidateAddress(request.Address);
+            _validationService.ValidateWeight(request.Weight);
+            _validationService.ValidateShippingType(request.ShippingType);
         }
     }
 }

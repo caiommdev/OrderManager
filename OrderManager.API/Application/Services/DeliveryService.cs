@@ -9,21 +9,15 @@ namespace OrderManager.API.Application.Services
 {
     public class DeliveryService : IDeliveryService
     {
-        private readonly IValidationService _validationService;
         private readonly IShippingCalculatorFactory _calculatorFactory;
 
-        public DeliveryService(IValidationService validationService, IShippingCalculatorFactory calculatorFactory)
+        public DeliveryService(IShippingCalculatorFactory calculatorFactory)
         {
-            _validationService = validationService;
             _calculatorFactory = calculatorFactory;
         }
 
         public Order CreateDelivery(string recipient, string address, double weight, string shippingTypeCode)
         {
-            _validationService.ValidateRecipient(recipient);
-            _validationService.ValidateAddress(address);
-            _validationService.ValidateWeight(weight);
-
             var recipientVO = new Recipient(recipient);
             var addressVO = new Address(address);
             var weightVO = new Weight(weight);
