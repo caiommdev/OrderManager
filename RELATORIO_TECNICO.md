@@ -24,6 +24,9 @@ A refatoração seguiu uma arquitetura em camadas bem definida:
 - **DeliveryController**: Expõe a API REST e trata requisições HTTP
 - **Contracts**: DTOs para comunicação externa (Requests/Responses)
 
+**Camada de Infraestrutura (`Infrastructure/`)**
+- **DependencyInjection**: Configuração do container de DI
+- **CrossCutting**: Extensões e utilitários transversais
 
 ### Exemplo de Abstração - Strategy Pattern
 

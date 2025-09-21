@@ -1,8 +1,8 @@
 using OrderManager.API.Application.Services.Interfaces;
-using OrderManager.API.Application.Services.Interfaces.Factories;
 using OrderManager.API.Application.Services.Interfaces.Validation;
 using OrderManager.API.Domain.Entities;
 using OrderManager.API.Domain.Enums;
+using OrderManager.API.Domain.Services.Factories;
 using OrderManager.API.Domain.ValueObjects;
 
 namespace OrderManager.API.Application.Services

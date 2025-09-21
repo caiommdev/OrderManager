@@ -543,6 +543,8 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
+.vs/*
+
 # JetBrains Rider
 
 ### VisualStudio Patch ###
