@@ -29,6 +29,8 @@ namespace OrderManager.API.Controllers
         {
             try
             {
+                ValidateRequest(request);
+                
                 var delivery = _deliveryService.CreateDelivery(
                     request.Recipient,
                     request.Address,
