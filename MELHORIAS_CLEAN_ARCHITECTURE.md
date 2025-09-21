@@ -2,10 +2,6 @@
 
 ## 📋 Resumo das Refatorações Implementadas
 
-### ✅ **Primeiro Ponto: Remoção de Lógica dos Value Objects**
-
-Implementei a separação correta entre **Value Objects** e **Services** seguindo os princípios de Clean Architecture:
-
 #### **Problema Identificado:**
 - Value Objects continham lógica de validação
 - Violação do princípio de responsabilidade única
@@ -232,17 +228,6 @@ Controllers → Services → Entities/VOs
 - Services dependem de abstrações
 - Implementações injetadas via DI Container
 
-## 📈 **Métricas de Melhoria**
-
-| **Aspecto** | **Antes** | **Depois** | **Melhoria** |
-|-------------|-----------|------------|--------------|
-| **Testes** | 35 | 49 | +40% |
-| **Layers** | 2 (Domain, Presentation) | 3 (Domain, Application, Presentation) | +50% |
-| **Separation of Concerns** | Parcial | Completa | +100% |
-| **Value Objects com Lógica** | 3 | 0 | -100% |
-| **Contracts Separados** | 0 | 3 | +∞ |
-| **Services de Validação** | 0 | 1 | +∞ |
-
 ## 🚀 **Nova Estrutura Final seguindo Clean Architecture**
 
 ```
@@ -283,20 +268,15 @@ Controllers → Services → Entities/VOs
 │       │       └── 📄 IValidationService.cs
 │       └── 📁 Validation/
 │           └── 📄 ValidationService.cs
-├── 📁 Presentation/ (Camada de Apresentação - Interface Externa)
-│   ├── 📁 Controllers/
-│   │   └── 📄 DeliveryController.cs (simplificado)
-│   └── 📁 Contracts/
-│       ├── 📁 Requests/
-│       │   └── 📄 CreateDeliveryRequest.cs
-│       └── 📁 Responses/
-│           ├── 📄 DeliveryResponse.cs
-│           └── 📄 PromotionalDiscountResponse.cs
-└── 📁 Infrastructure/ (Camada de Infraestrutura - Detalhes Técnicos)
-    ├── 📁 Configuration/
-    │   └── 📄 DependencyInjection.cs
-    └── 📁 CrossCutting/
-        └── 📄 Extensions.cs
+├── Presentation/ (Camada de Apresentação - Interface Externa)
+   ├── 📁 Controllers/
+   │   └── 📄 DeliveryController.cs (simplificado)
+   └── 📁 Contracts/
+       ├── 📁 Requests/
+       │   └── 📄 CreateDeliveryRequest.cs
+       └── 📁 Responses/
+           ├── 📄 DeliveryResponse.cs
+           └── 📄 PromotionalDiscountResponse.cs
 ```
 
 ## ✨ **Conclusão**

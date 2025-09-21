@@ -4,53 +4,7 @@
 
 ### ✅ **Primeiro Ponto de Melhoria: Separação de Classes e Interfaces**
 
-Implementei o princípio **"Uma Classe por Arquivo"** seguindo as boas práticas de Clean Code:
-
-#### Antes da Refatoração:
-- `ShippingCalculators.cs` - **3 classes** em um arquivo
-- `DomainExceptions.cs` - **5 classes** em um arquivo  
-- `ValueObjects.cs` - **3 classes** em um arquivo
-- `ShippingCalculatorFactory.cs` - **1 interface + 1 classe** em um arquivo
-- `LabelService.cs` - **1 interface + 1 classe** em um arquivo
-
-#### Depois da Refatoração:
-- ✅ **ExpressShippingCalculator.cs** - 1 classe
-- ✅ **StandardShippingCalculator.cs** - 1 classe  
-- ✅ **EconomyShippingCalculator.cs** - 1 classe
-- ✅ **DomainException.cs** - 1 classe
-- ✅ **InvalidWeightException.cs** - 1 classe
-- ✅ **InvalidAddressException.cs** - 1 classe
-- ✅ **InvalidRecipientException.cs** - 1 classe
-- ✅ **UnsupportedShippingTypeException.cs** - 1 classe
-- ✅ **Weight.cs** - 1 classe
-- ✅ **Address.cs** - 1 classe
-- ✅ **Recipient.cs** - 1 classe
-- ✅ **IShippingCalculatorFactory.cs** - 1 interface
-- ✅ **ShippingCalculatorFactory.cs** - 1 classe
-- ✅ **ILabelService.cs** - 1 interface
-- ✅ **LabelService.cs** - 1 classe
-
-### ✅ **Segundo Ponto de Melhoria: Remoção de Comentários Desnecessários**
-
-Removi comentários que não agregavam valor seguindo o princípio **"O código deve ser autoexplicativo"**:
-
-#### Comentários Removidos:
-```csharp
-// Antes
-// Add services to the container.
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-
-// Depois - Código limpo e autoexplicativo
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-
-if (app.Environment.IsDevelopment())
-```
+Implementei o princípio **Responsabilidade Unica** seguindo as boas práticas de Clean Code:
 
 ## 🎯 **Benefícios das Melhorias**
 
@@ -74,90 +28,56 @@ if (app.Environment.IsDevelopment())
 - Nomes de classes e métodos que expressam intenção
 - Redução de ruído visual
 
-## 📊 **Métricas de Melhoria**
-
-| **Métrica** | **Antes** | **Depois** | **Melhoria** |
-|-------------|-----------|------------|--------------|
-| Arquivos com múltiplas classes | 5 | 0 | -100% |
-| Classes por arquivo (média) | 2.4 | 1.0 | -58% |
-| Comentários desnecessários | 4 | 0 | -100% |
-| Arquivos de código | 12 | 17 | +42% |
-
-## 🧪 **Validação da Refatoração**
-
-### ✅ **Compilação Bem-sucedida**
-```
-Build succeeded.
-0 Warning(s)  
-0 Error(s)
-```
-
-### ✅ **Todos os Testes Passaram**
-```
-Passed!  - Failed: 0, Passed: 35, Skipped: 0, Total: 35
-```
-
-### ✅ **Zero Regressões**
-- Funcionalidade mantida 100%
-- API endpoints funcionais
-- Validações preservadas
 
 ## 🏗️ **Nova Estrutura de Arquivos seguindo Clean Architecture**
 
 ```
-📁 Domain/ (Camada de Domínio - Núcleo do Negócio)
-├── 📁 Entities/
-│   └── 📄 Order.cs
-├── 📁 ValueObjects/
-│   ├── 📄 Weight.cs
-│   ├── 📄 Address.cs
-│   └── 📄 Recipient.cs
-├── 📁 Interfaces/
-│   └── 📄 IShippingCalculator.cs
-├── 📁 Services/
-│   ├── � ExpressShippingCalculator.cs
-│   ├── 📄 StandardShippingCalculator.cs
-│   └── 📄 EconomyShippingCalculator.cs
-├── 📁 Exceptions/
-│   ├── 📄 DomainException.cs
-│   ├── 📄 InvalidWeightException.cs
-│   ├── 📄 InvalidAddressException.cs
-│   ├── � InvalidRecipientException.cs
-│   └── 📄 UnsupportedShippingTypeException.cs
-└── 📁 Enums/
-    └── 📄 ShippingType.cs
-
-📁 Application/ (Camada de Aplicação - Casos de Uso)
-├── 📁 Services/
-│   ├── 📄 DeliveryService.cs
-│   ├── 📄 LabelService.cs
-│   ├── 📁 Factories/
-│   │   └── 📄 ShippingCalculatorFactory.cs
-│   ├── � Interfaces/
-│   │   ├── 📄 IDeliveryService.cs
-│   │   ├── 📄 ILabelService.cs
-│   │   ├── 📁 Factories/
-│   │   │   └── 📄 IShippingCalculatorFactory.cs
-│   │   └── 📁 Validation/
-│   │       └── 📄 IValidationService.cs
-│   └── 📁 Validation/
-│       └── 📄 ValidationService.cs
-
-📁 Presentation/ (Camada de Apresentação - Interface Externa)
-├── 📁 Controllers/
-│   └── 📄 DeliveryController.cs
-└── 📁 Contracts/
-    ├── 📁 Requests/
-    │   └── 📄 CreateDeliveryRequest.cs
-    └── 📁 Responses/
-        ├── 📄 DeliveryResponse.cs
-        └── 📄 PromotionalDiscountResponse.cs
-
-📁 Infrastructure/ (Camada de Infraestrutura - Detalhes Técnicos)
-├── 📁 Configuration/
-│   └── 📄 DependencyInjection.cs
-└── 📁 CrossCutting/
-    └── 📄 Extensions.cs
+📁 OrderManager.API/
+├── 📁 Domain/ (Camada de Domínio - Regras de Negócio)
+│   ├── 📁 Entities/
+│   │   └── 📄 Order.cs
+│   ├── 📁 ValueObjects/ (sem lógica - apenas dados)
+│   │   ├── 📄 Weight.cs
+│   │   ├── 📄 Address.cs
+│   │   └── 📄 Recipient.cs
+│   ├── 📁 Interfaces/
+│   │   └── � IShippingCalculator.cs
+│   ├── �📁 Services/ (Serviços de Domínio)
+│   │   ├── 📄 ExpressShippingCalculator.cs
+│   │   ├── 📄 StandardShippingCalculator.cs
+│   │   └── 📄 EconomyShippingCalculator.cs
+│   ├── 📁 Exceptions/
+│   │   ├── 📄 DomainException.cs
+│   │   ├── 📄 InvalidWeightException.cs
+│   │   ├── � InvalidAddressException.cs
+│   │   ├── � InvalidRecipientException.cs
+│   │   └── 📄 UnsupportedShippingTypeException.cs
+│   └── 📁 Enums/
+│       └── 📄 ShippingType.cs
+├── 📁 Application/ (Camada de Aplicação - Casos de Uso)
+│   └── 📁 Services/
+│       ├── 📄 DeliveryService.cs
+│       ├── 📄 LabelService.cs
+│       ├── 📁 Factories/
+│       │   └── 📄 ShippingCalculatorFactory.cs
+│       ├── 📁 Interfaces/
+│       │   ├── � IDeliveryService.cs
+│       │   ├── 📄 ILabelService.cs
+│       │   ├── 📁 Factories/
+│       │   │   └── 📄 IShippingCalculatorFactory.cs
+│       │   └── 📁 Validation/
+│       │       └── 📄 IValidationService.cs
+│       └── 📁 Validation/
+│           └── 📄 ValidationService.cs
+├── Presentation/ (Camada de Apresentação - Interface Externa)
+   ├── 📁 Controllers/
+   │   └── 📄 DeliveryController.cs (simplificado)
+   └── 📁 Contracts/
+       ├── 📁 Requests/
+       │   └── 📄 CreateDeliveryRequest.cs
+       └── 📁 Responses/
+           ├── 📄 DeliveryResponse.cs
+           └── 📄 PromotionalDiscountResponse.cs
 ```
 
 ## 🎨 **Princípios de Clean Code Aplicados**
