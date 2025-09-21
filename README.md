@@ -56,7 +56,7 @@ Este documento apresenta a solução completa para a refatoração do sistema le
 │   └── 📁 Validation/
 │       └── 📄 ValidationService.cs  # Validações de entrada
 
-📁 Presentation/ (Camada de Apresentação - API/UI)
+Presentation/ (Camada de Apresentação - API/UI)
 ├── 📁 Controllers/
 │   └── 📄 DeliveryController.cs     # API REST endpoints
 └── 📁 Contracts/
@@ -65,12 +65,7 @@ Este documento apresenta a solução completa para a refatoração do sistema le
     └── 📁 Responses/
         ├── 📄 DeliveryResponse.cs
         └── 📄 PromotionalDiscountResponse.cs
-
-📁 Infrastructure/ (Camada de Infraestrutura - Tecnologia)
-├── 📁 Configuration/
-│   └── 📄 DependencyInjection.cs   # Configuração DI
-└── 📁 CrossCutting/
-    └── 📄 Extensions.cs            # Extensões úteis
+          # Extensões úteis
 ```
 
 ## 🚀 Funcionalidades Implementadas
