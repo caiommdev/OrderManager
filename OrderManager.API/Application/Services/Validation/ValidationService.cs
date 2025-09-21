@@ -26,8 +26,17 @@ namespace OrderManager.API.Application.Services.Validation
 
         public void ValidateShippingType(string shippingType)
         {
-            if (!Enum.TryParse<ShippingType>(shippingType, out var _))
-                throw new InvalidShippingTypeException(shippingType ?? "null");
+            if (string.IsNullOrWhiteSpace(shippingType))
+                throw new UnsupportedShippingTypeException(shippingType ?? "null");
+
+            try
+            {
+                ShippingTypeExtensions.FromCode(shippingType);
+            }
+            catch (ArgumentException)
+            {
+                throw new UnsupportedShippingTypeException(shippingType);
+            }
         }
     }
 }
