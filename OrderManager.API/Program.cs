@@ -1,9 +1,9 @@
-using OrderManager.API.Application.Services.Interfaces;
-using OrderManager.API.Application.Services.Interfaces.Factories;
-using OrderManager.API.Application.Services.Interfaces.Validation;
 using OrderManager.API.Application.Services;
-using OrderManager.API.Application.Services.Validation;
 using OrderManager.API.Application.Services.Factories;
+using OrderManager.API.Application.Services.Interfaces;
+using OrderManager.API.Application.Services.Interfaces.Validation;
+using OrderManager.API.Application.Services.Validation;
+using OrderManager.API.Domain.Services.Factories;
 
 var builder = WebApplication.CreateBuilder(args);
 
