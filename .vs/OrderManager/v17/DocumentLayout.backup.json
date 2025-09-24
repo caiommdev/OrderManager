@@ -3,56 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\application\\services\\interfaces\\factories\\ishippingcalculatorfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\application\\services\\interfaces\\factories\\ishippingcalculatorfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\application\\services\\validation\\validationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\application\\services\\validation\\validationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\application\\services\\deliveryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\application\\services\\deliveryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\domain\\enums\\shippingtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\domain\\enums\\shippingtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\application\\services\\interfaces\\ideliveryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\application\\services\\interfaces\\ideliveryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\application\\services\\interfaces\\ilabelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\application\\services\\interfaces\\ilabelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\application\\services\\interfaces\\ishippingcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\application\\services\\interfaces\\ishippingcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\controllers\\deliverycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\controllers\\deliverycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|c:\\users\\caiom\\onedrive\\documentos\\infnet\\engsoftware\\cleancode\\at\\ordermanager\\ordermanager.api\\application\\services\\interfaces\\validation\\ivalidationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F93BCEF6-036A-4E9B-8FEB-9A387FC47CAB}|OrderManager.API\\OrderManager.API.csproj|solutionrelative:ordermanager.api\\application\\services\\interfaces\\validation\\ivalidationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,172 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-09-21T00:34:12.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ILabelService.cs",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\ILabelService.cs",
-              "RelativeDocumentMoniker": "OrderManager.API\\Application\\Services\\Interfaces\\ILabelService.cs",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\ILabelService.cs",
-              "RelativeToolTip": "OrderManager.API\\Application\\Services\\Interfaces\\ILabelService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:09:07.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IDeliveryService.cs",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\IDeliveryService.cs",
-              "RelativeDocumentMoniker": "OrderManager.API\\Application\\Services\\Interfaces\\IDeliveryService.cs",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\IDeliveryService.cs",
-              "RelativeToolTip": "OrderManager.API\\Application\\Services\\Interfaces\\IDeliveryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:09:01.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ValidationService.cs",
               "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Validation\\ValidationService.cs",
               "RelativeDocumentMoniker": "OrderManager.API\\Application\\Services\\Validation\\ValidationService.cs",
               "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Validation\\ValidationService.cs",
               "RelativeToolTip": "OrderManager.API\\Application\\Services\\Validation\\ValidationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAMwBwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:07:36.376Z",
+              "WhenOpened": "2025-09-21T22:41:52.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IShippingCalculatorFactory.cs",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\Factories\\IShippingCalculatorFactory.cs",
-              "RelativeDocumentMoniker": "OrderManager.API\\Application\\Services\\Interfaces\\Factories\\IShippingCalculatorFactory.cs",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\Factories\\IShippingCalculatorFactory.cs",
-              "RelativeToolTip": "OrderManager.API\\Application\\Services\\Interfaces\\Factories\\IShippingCalculatorFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:08:55.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ShippingType.cs",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Domain\\Enums\\ShippingType.cs",
-              "RelativeDocumentMoniker": "OrderManager.API\\Domain\\Enums\\ShippingType.cs",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Domain\\Enums\\ShippingType.cs",
-              "RelativeToolTip": "OrderManager.API\\Domain\\Enums\\ShippingType.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwBwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:14:16.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAA8CAAAAAAAAAAAkwCYCAABsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-21T00:32:32.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DeliveryService.cs",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\DeliveryService.cs",
-              "RelativeDocumentMoniker": "OrderManager.API\\Application\\Services\\DeliveryService.cs",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\DeliveryService.cs",
-              "RelativeToolTip": "OrderManager.API\\Application\\Services\\DeliveryService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAqwCIAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:04:37.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Domain\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "OrderManager.API\\Domain\\Entities\\Order.cs",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Domain\\Entities\\Order.cs",
-              "RelativeToolTip": "OrderManager.API\\Domain\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:05:19.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IShippingCalculator.cs",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\IShippingCalculator.cs",
-              "RelativeDocumentMoniker": "OrderManager.API\\Application\\Services\\Interfaces\\IShippingCalculator.cs",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\IShippingCalculator.cs",
-              "RelativeToolTip": "OrderManager.API\\Application\\Services\\Interfaces\\IShippingCalculator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:10:55.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Program.cs",
               "RelativeDocumentMoniker": "OrderManager.API\\Program.cs",
               "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Program.cs",
               "RelativeToolTip": "OrderManager.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:11:31.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DeliveryController.cs",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Controllers\\DeliveryController.cs",
-              "RelativeDocumentMoniker": "OrderManager.API\\Controllers\\DeliveryController.cs",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Controllers\\DeliveryController.cs",
-              "RelativeToolTip": "OrderManager.API\\Controllers\\DeliveryController.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:05:03.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IValidationService.cs",
-              "DocumentMoniker": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\Validation\\IValidationService.cs",
-              "RelativeDocumentMoniker": "OrderManager.API\\Application\\Services\\Interfaces\\Validation\\IValidationService.cs",
-              "ToolTip": "C:\\Users\\caiom\\OneDrive\\Documentos\\Infnet\\EngSoftware\\CleanCode\\AT\\OrderManager\\OrderManager.API\\Application\\Services\\Interfaces\\Validation\\IValidationService.cs",
-              "RelativeToolTip": "OrderManager.API\\Application\\Services\\Interfaces\\Validation\\IValidationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T00:08:49.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-21T22:35:11.846Z"
             }
           ]
         }
